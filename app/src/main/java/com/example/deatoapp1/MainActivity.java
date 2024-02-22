@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-        //Constructors
         name = (TextView) findViewById(R.id.txtName);
         myName = (TextView) findViewById(R.id.txtMyName);
         email = (TextView) findViewById(R.id.txtEmail);
@@ -39,9 +37,7 @@ public class MainActivity extends AppCompatActivity {
         myButton = (Button) findViewById(R.id.btnClick);
         myClear = (Button) findViewById(R.id.btnClear);
 
-        myInput = (EditText) findViewById(R.id.txtName2);
-
-
+        myInput = (EditText) findViewById(R.id.txtInputname);
 
 
         myButton.setOnClickListener(new View.OnClickListener() {
@@ -52,12 +48,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         myClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myDisplay.setText("empty...");
+                String myValue = myInput.getText().toString();
+                myDisplay.setText("Hello!");
             }
         });
     }
